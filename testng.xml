@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Advance Level Suite">
+	<listeners>
+		<listener class-name="Reports.ExtentListeners"></listener>
+		<listener class-name="listeners.LogListeners"></listener>
+	</listeners>
+	<parameter name="browser" value="firefox"></parameter>
+	<test name="Test" parallel="methods" thread-count="3">
+		<classes>
+			<class name="Tests.Google">
+				<methods>
+					<include name="test1" />
+				</methods>
+			</class>
+
+			<class name="Tests.Twitter">
+				<methods>
+					<include name="test3" />
+				</methods>
+			</class>
+
+
+			<class name="Tests.Youtube">
+				<methods>
+					<include name="test2" />
+					<include name="test3" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
