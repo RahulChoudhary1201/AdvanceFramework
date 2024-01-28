@@ -10,17 +10,20 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import resusableComponents.PropertiesOperation;
 
 public class BrowserFactory {
-//	protected WebDriver driver;
 
 	@BeforeMethod
-	@Parameters({ "browser" })
-	public void createBrowserInstance(String browser) {
-
+	public void createBrowserInstance() {
+		String browser = null;
+		try {
+			browser = PropertiesOperation.getPropertyValueByKey("browser");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		if (browser.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions opt = new ChromeOptions();
