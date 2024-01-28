@@ -1,11 +1,12 @@
 # Advance Level Framework With Java & Selenium, TestNG
-This Framework supports parallel execution, logs ever action to app.log file, for reporting extent report has been used.
+A Framework based on Page Object Model, Selenium, TestNg with Java.
 
 ## Tools used in the framework: 
-1. Selenium
-2. TestNG
-3. Maven
-4. Java
+1. Java
+2. Selenium
+3. TestNG
+4. Log4j
+5. Extent Report
 
 ## Features & Functionalities: 
 1. Implemented Log which will log every event of test execution
