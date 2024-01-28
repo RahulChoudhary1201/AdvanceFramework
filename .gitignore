@@ -3,5 +3,5 @@ test-output/
 .project
 .settings
 /target/
-Reports/
+/Reports
 logs/
